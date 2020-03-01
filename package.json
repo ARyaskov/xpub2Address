@@ -1,5 +1,5 @@
 {
-  "name": "xpub2Address",
+  "name": "@aryaskov/xpub2Address",
   "version": "0.0.1",
   "description": "Extract bitcoin address from xpub for BIP49 and BIP84 schemes.",
   "license": "MIT",
