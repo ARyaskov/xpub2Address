@@ -1,6 +1,7 @@
 # xpub2Address
 
 > Convert xpub to BTC address using derivation path. 
+>
 > BIP49 (P2SH (Pay 2 Script Hash), 3-addresses) and BIP84 (bech32) are supported.
 
 
@@ -46,6 +47,7 @@ const xpub = 'tpubDANRtEBrEW15BPAkLhPhqW6dTZuAa1ReuBSkqvjAzN6vmNGDNaAtHvbY447NGM
 const path = `m/49'/0'/0'/0/0`
 
 console.log(xpub2Address(xpub, path))
+
 // 2Msko9C27BtRVJfeq3LYbbiddBPM8S61ASt
 
 
@@ -70,7 +72,7 @@ Type: `string`
 BIP32 Derivation path like `m/84'/coin_type'/account'/change/address`
 
 
-###Known issues
+### Known issues
 
 - Only Account #0 in derivation path is supported now.
 
