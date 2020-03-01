@@ -1,0 +1,26 @@
+{
+  "name": "xpub2Address",
+  "version": "0.0.1",
+  "description": "Extract bitcoin address from xpub for BIP49 and BIP84 schemes.",
+  "license": "MIT",
+  "repository": "ARyaskov/xpub2Address",
+  "author": {
+    "name": "Andrei Riaskov",
+    "email": "code@riaskov.com"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "xpub2Address",
+    "bitcoin",
+    "btc",
+    "bip",
+    "bip49",
+    "bip84"
+  ],
+  "dependencies": {
+    "bitcoinjs-lib": "5.1.7"
+  }
+}
