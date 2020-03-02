@@ -6,8 +6,9 @@
 
 
 ### Install
+This package is on GitHub Packages at the moment.
 
-    $ yarn add xpub2Address
+    $ yarn add xpub2address
 
 ### Usage
 
