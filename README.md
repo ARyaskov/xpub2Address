@@ -1,4 +1,4 @@
-# xpub2Address
+# xpub2Address ![Bitcoin Badge](https://img.shields.io/badge/Bitcoin-F7931A?logo=bitcoin&logoColor=fff&style=flat) ![npm Badge](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff&style=flat)
 
 > Convert xpub to BTC address using derivation path. 
 >
