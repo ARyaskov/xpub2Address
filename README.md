@@ -6,7 +6,6 @@
 
 
 ## Install
-This package is on GitHub Packages at the moment.
 
     $ yarn add @riaskov/xpub2address
 
