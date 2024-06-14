@@ -15,16 +15,19 @@
  * Author: Andréi Riaskóv @ https://github.com/ARyaskov
  */
 
-const bjs = require('bitcoinjs-lib')
+import * as bjs from "bitcoinjs-lib";
+import * as BIP32 from 'bip32';
+import * as ecc from 'tiny-secp256k1';
+const bip32 = BIP32.BIP32Factory(ecc);
 
-module.exports = (xpub, path) => {
-  let result = ''
+export function xpub2Address(xpub: string, path: string) {
+  let result: string | undefined = ''
   const ppa = path.split('/')
   let _network = bjs.networks.bitcoin
   if (xpub.charAt(0) === 't') {
     _network = bjs.networks.testnet
   }
-  const restored = bjs.bip32.fromBase58(xpub, _network)
+  const restored = bip32.fromBase58(xpub, _network)
   const purpose = ppa[1].slice(0, -1)
   const node = restored.derive(parseInt(ppa[4])).derive(parseInt(ppa[5]))
   if (purpose === '49') {

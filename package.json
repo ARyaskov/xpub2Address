@@ -1,6 +1,6 @@
 {
-  "name": "@aryaskov/xpub2address",
-  "version": "0.0.1",
+  "name": "@riaskov/xpub2address",
+  "version": "1.0.0",
   "description": "Extract bitcoin address from xpub for BIP49 and BIP84 schemes.",
   "license": "MIT",
   "repository": "ARyaskov/xpub2Address",
@@ -8,8 +8,17 @@
     "name": "Andrei Riaskov",
     "email": "code@riaskov.com"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "source": "./index.ts",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "files": [
     "index.js",
     "index.d.ts"
@@ -22,7 +31,29 @@
     "bip49",
     "bip84"
   ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:ts": "tsc",
+    "test": "tsx test.ts",
+    "format": "prettier --write \"./*.ts\""
+  },
   "dependencies": {
-    "bitcoinjs-lib": "5.1.7"
+    "@types/node": "^20.14.2",
+    "bip32": "^4.0.0",
+    "bitcoinjs-lib": "^6.1.6",
+    "tiny-secp256k1": "^2.2.3",
+    "tsx": "^4.15.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.3",
+    "typescript": "5.5.1-rc"
   }
 }

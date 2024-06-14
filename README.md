@@ -5,12 +5,12 @@
 > BIP49 (P2SH (Pay 2 Script Hash), 3-addresses) and BIP84 (bech32) are supported.
 
 
-### Install
+## Install
 This package is on GitHub Packages at the moment.
 
-    $ yarn add xpub2address
+    $ yarn add @riaskov/xpub2address
 
-### Usage
+## Usage
 
 Available for JavaScript (ES6) and TypeScript.
 Enable `esModuleInterop` in `tsconfig.json` in case of using TS.
@@ -19,7 +19,7 @@ Why? For using `import x from 'x'` instead of `import * as xNS from 'x'`.
 
 ```js
 
-const xpub2Address = require('xpub2Address')
+import { xpub2Address } from '@riaskov/xpub2address'
 
 const xpub = 'xpub69zoMzNAXE3cuayttWQcdamG8SoWacvbMYrTVNg2eTM325bWJMKo9Uvhp22ajraN7X2D7cnt674ejAJtkYb8Nop5fFrf3MWUN8QmqZdUcua'
 const path = `m/49'/0'/0'/0/0`
@@ -32,7 +32,7 @@ console.log(xpub2Address(xpub, path))
 
 ```js
 
-import xpub2Address from 'xpub2Address'
+import { xpub2Address } from '@riaskov/xpub2address'
 
 const xpub = 'xpub69zoMzNAXE3cuayttWQcdamG8SoWacvbMYrTVNg2eTM325bWJMKo9Uvhp22ajraN7X2D7cnt674ejAJtkYb8Nop5fFrf3MWUN8QmqZdUcua'
 const path = `m/84'/0'/0'/0/0`
@@ -42,7 +42,7 @@ console.log(xpub2Address(xpub, path))
 // bc1qkedqp6weywmvs84du9dc77xwytrmjmvlldfmed
 
 
-import xpub2Address from 'xpub2Address'
+import { xpub2Address } from '@riaskov/xpub2address'
 
 const xpub = 'tpubDANRtEBrEW15BPAkLhPhqW6dTZuAa1ReuBSkqvjAzN6vmNGDNaAtHvbY447NGMXbuRZ7jCJkdCthRLoW9QSNGFGNirbxitAhx61BbYUeyD9'
 const path = `m/49'/0'/0'/0/0`
@@ -54,9 +54,9 @@ console.log(xpub2Address(xpub, path))
 
 ```
 
-### API
+## API
 
-#### xpub2Address(xpub: string, path: string)
+### xpub2Address(xpub: string, path: string)
 
 Returns a string with derived BTC address.
 
@@ -86,4 +86,4 @@ BIP32 Derivation path like `m/84'/coin_type'/account'/change/address`
 
 ### License
 
-- MIT © 2020 [Andrei Riaskov](https://github.com/ARyaskov)
+- MIT © 2024 [Andrei Riaskov](https://github.com/ARyaskov)
