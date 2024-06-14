@@ -32,8 +32,8 @@
     "bip84"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "build:ts": "tsc",
+    "build:rollup": "rollup -c",
+    "build": "tsc",
     "test": "tsx test.ts",
     "format": "prettier --write \"./*.ts\""
   },
